@@ -18,7 +18,11 @@ from datetime import datetime
 startTime = datetime.now()
 print datetime.now() - startTime
 
-N = testNumber - 1  # TO begin - Start Index at one LESS than test number (e.g. 103 starts at 102)
+#N = testNumber - 1  # TO begin - Start Index at one LESS than test number (e.g. 103 starts at 102)
+
+# Changed this to TN/2 - as you'll never have an neat factor more than half of number
+N = testNumber/2  # TO begin - Start Index at one LESS than test number (e.g. 103 starts at 102)
+
 S = 0 # THIS IS THe bucket for adding our factors.  If it stays 0, then no factors other than TN and 1, therefore meets definition of prime
 
 while N > 1: # Main loop to run "testNumber-times less two" loops - e.g. testing 100 loops from 99 down to 2, then stops (so 98 times
